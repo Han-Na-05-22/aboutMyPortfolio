@@ -7,7 +7,7 @@
 gulpfile.js
 package.json
 package-lock.json
-/img
+img
 /music
 /class
 /DB
