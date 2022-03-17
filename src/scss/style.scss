@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+
+@import 'common/reset';
+@import 'common/layout';
+@import 'common/nav';
+@import 'common/profile';
+
+@import 'main/main';
+@import 'main/home';
+
+@import 'sub/about';
+@import 'sub/myportfolio';
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+body{
+    overflow-x: hidden;
+    background: linear-gradient(45deg,rgb(255, 203, 255),rgb(206, 248, 255));
+
+}

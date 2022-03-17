@@ -1,0 +1,140 @@
+.myportfolioContent{
+    left: 15px;
+    z-index:3;
+
+    h2{
+        margin-bottom: 30px;
+        font:bold 22.5px/1 'Josefin Sans';
+        letter-spacing: 1.5px;
+        position: relative;
+        color:#333;
+        
+        &::after{
+            position: absolute;
+            bottom:2.5px;
+            left:30px;
+            height: 12.5px;
+            background: rgba(255, 192, 203, 0.7);
+            display: block;
+            z-index:-1;
+            content: '';
+            animation: mypfAni 1.5s linear;
+            animation-fill-mode: forwards;
+        }
+    }
+
+
+    >.wrap{
+        width: 100%;
+        height: 100%;
+        overflow:hidden;
+
+        #tab{
+            position: absolute;
+            width: 100%;
+            position: relative;
+            border-radius: 15px;
+
+      
+            dt{
+                width: calc(100% / 3);
+                height: 40px;
+                position: absolute;
+                top: 0;
+                cursor: pointer;
+                text-align: center;
+                background: rgba(255, 206, 214, 0.7);
+                transition: 1.5s;
+                border-radius: 15px 15px 0px 0px;
+
+                &:nth-of-type(1){left: calc(100% / 3)*0;}
+                &:nth-of-type(2){left: calc(100% / 3)*1;}
+                &:nth-of-type(3){left: calc(100% / 3)*2;}
+
+                &.on{
+                    background: rgba(255,255,255,.5);
+                 
+                    button{
+                        color:#222;
+                    }
+                }                 
+
+                button{
+                    font:bold  15px/40px '맑은 고딕';
+                    letter-spacing: 1.5px;
+                    color:#777;
+                    width: 100%;
+                    height: 100%;
+                    border:none;
+                    background: none;
+                    cursor: pointer;
+                    transition: 1.5s;
+                }
+
+            }
+
+            dd{
+                width: 100%;
+                height: 540px;
+                background: rgba(255,255,255,.5);
+                position: absolute;
+                top: 40px;
+                z-index:-1;
+                padding:15px;
+                transition: 2s;
+                opacity: 0;
+                border-radius: 0px 0px 15px 15px;
+
+                img{
+                    width: 100%;
+                    height:300px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    margin-bottom: 5px;
+                    transition: 2s;
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+    
+                span{
+                    font:bold  11.5px/1 '맑은 고딕';
+                    letter-spacing: 1.5px;
+                    text-align: right;
+                    display: block;
+                    color:#333;
+                    transition: 2s;
+                    opacity: 0;
+                    transform: translateY(100%);
+                }
+        
+                p{
+                    margin-top: 15px;
+                    font:normal  12.5px/20px '맑은 고딕';
+                    letter-spacing: 1px;
+                    transition: 2s;
+                    opacity: 0;
+                    transform: translateY(100%);
+                }
+
+                &.on{
+                   z-index:3;
+                   opacity: 1;
+
+                    img,span,p{
+                        transform: translateY(0);
+                        opacity: 1;
+                        
+                    }
+                   
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes mypfAni{
+    0%{width: 0%; opacity: 0; }
+    50%{ opacity: 1; }
+    100%{width: 29%;}
+}

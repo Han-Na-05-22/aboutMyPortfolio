@@ -1,0 +1,349 @@
+.aboutContent{
+
+    .aboutMe{
+        width: 90%;
+        height: 35%;
+        border-radius: 15px;
+        padding:30px;
+        border:1px solid rgba(255,255,255,.5);
+        position: relative;
+        left: 35px;
+        margin-bottom: 10px;
+        background: rgba(255,255,255,.3);
+        
+        h2{
+            font:bold 22.5px/1 'Josefin Sans';
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            position: absolute;
+            color:#333;
+            top: -15px;
+
+            &::after{
+                position: absolute;
+                bottom:2.5px;
+                left:15px;
+                height: 12.5px;
+                background: rgba(255, 192, 203, 0.7);
+                display: block;
+                z-index:-1;
+                content: '';
+                animation: aboutAni 1.5s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        p{
+            font:normal  15px/20px '맑은 고딕';
+            letter-spacing: 1.5px;
+        }
+    }
+
+    .mySkill{
+        width: 100%;
+        height: 15%;
+        padding:15px 0px 15px 60px;
+        margin-bottom: 25px;
+
+        h2{
+            font:bold 22.5px/1 'Josefin Sans';
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            position: relative;
+            color:#333;
+
+            &::after{
+                position: absolute;
+                bottom:2.5px;
+                left:15px;
+                height: 12.5px;
+                background: rgba(255, 192, 203, 0.7);
+                display: block;
+                z-index:-1;
+                content: '';
+                animation: aboutAni2 1.5s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            li{
+                width: calc((100% - 100px)/8);
+                border:2px solid rgba(255,255,255,.5);
+
+                &:nth-of-type(2){padding:10px;}
+
+                &:nth-of-type(4),&:nth-of-type(7),&:nth-of-type(8){padding:5px;}
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .music{
+        width: 90%;
+        height: 35%;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        position: relative;
+        left: 50px;
+        padding:0px 15px 0px 15px;
+        top: 60px;
+
+
+        h2{
+            font:bold 22.5px/1 'Josefin Sans';
+            letter-spacing: 1.5px;
+            position: absolute;
+            top: -40px;
+            color:#333;
+
+            &::after{
+                position: absolute;
+                bottom:2.5px;
+                left:15px;
+                height: 12.5px;
+                background: rgba(255, 192, 203, 0.7);
+                display: block;
+                z-index:-1;
+                content: '';
+                animation: aboutAni 1.5s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .swiper.swiper-initialized{
+            height: 100%;
+
+            .swiper-button-prev{
+                top: 50%;
+                left:5%;
+                width: 70px;
+                height: 50px;
+                font-size: 25px;
+                color:#555;
+                content: "";
+                position: absolute;
+                cursor: pointer;
+                z-index:3;
+
+                &::before{
+                    content:'';
+                    display:block; 
+                    width:50%;
+                    height:1px;
+                    background:#555; 
+                    position:absolute;
+                    top:50%;
+                    left: 50%;
+                    transition:0.5s; 
+                    transform-origin:left center; 
+                    transform:rotate(-180deg);
+                }
+        
+                &::after{
+                    content:'';
+                    display:block; 
+                    width:50%;
+                    height:1px;
+                    background:#555; 
+                    position:absolute;
+                    bottom:50%;
+                    left: 50%;
+                    transition:0.5s; 
+                    transform-origin:left center; 
+                    transform:rotate(180deg);
+                }
+
+                &:hover{
+                    &::before{
+                        transform:rotate(-30deg);
+                    }
+                    &::after{
+                        transform:rotate(30deg); 
+                    }
+                }
+            }
+            
+
+            .swiper-button-next{
+                top: 50%;
+                right: 5%;
+                width: 70px;
+                height: 50px;
+                font-size: 25px;
+                color:#555;
+                position: absolute;
+               cursor: pointer;
+               z-index:3;
+
+
+                &::before{
+                    content: "";
+                    display:block; 
+                    width:50%;
+                    height:1px;
+                    background:#555; 
+                    position:absolute;
+                    top:50%;
+                    left:0%; 
+                    transition:0.5s; 
+                    transform-origin:right center; 
+                    transform:rotate(-180deg);
+                }
+        
+                &::after{
+                    content:'';
+                    display:block; 
+                    width:50%;
+                    height:1px;
+                    background:#555; 
+                    position:absolute;
+                    bottom:50%;
+                    left:0%; 
+                    transition:0.5s; 
+                    transform-origin:right center; 
+                    transform:rotate(180deg);
+                }
+
+                &:hover{
+                    &::before{
+                        transform:rotate(-30deg);
+                    }
+                    &::after{
+                        transform:rotate(30deg); 
+                    }
+                }
+            }
+
+            .swiper-wrapper{
+                display: flex;
+                justify-content: space-between;
+                width: 2300px;
+                margin: 0 auto;
+
+                .swiper-slide{
+                    height:220px;
+                    width: 500px;
+
+                    .wrap{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding:10px;
+                        border-radius: 15px;
+                        background: rgba(255,255,255,.5);
+
+
+                        &.on{
+                            .pic{
+                                animation: aboutAni3 4s linear infinite;
+                            }
+                        }
+
+                        .txt{
+                            width: 50%;
+                            height: 50px;
+                            text-align: center;
+    
+                            strong{
+                                font:bold 15px/1 'Josefin Sans';
+                                letter-spacing: 1.5px;
+                                display: block;
+                                margin-bottom: 5px;
+                                margin-top: 5px;
+                            }
+    
+                            span{
+                                font:normal 11px/1 'Josefin Sans';
+                                letter-spacing: 1px;
+                            }
+                        }
+        
+                        .pic{
+                            width:125px;
+                            height: 125px;
+                            margin: 0 auto;
+                            position: relative;
+
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                width: 35px;
+                                height: 35px;
+                                background: rgba(255,255,255,.7);
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                z-index:5;
+                                border-radius: 50%;
+                            }
+    
+                            >img{
+                               width: 100%;
+                               height: 100%;
+                                object-fit: cover;
+                            }   
+                        }
+                        .test2{
+                            position: absolute;
+                            width: 50px;
+                            height: 50px;
+                            bottom: 50px;
+                            left: 50px;
+                            background: red;
+                            z-index:1;
+                        }
+
+                        .music2{
+                            border:1px solid red;
+                            position: absolute;
+                            bottom: 50px;
+                            left: 50px;
+                            width: 50px;
+                            height: 50px;
+
+                            audio{
+                            position: absolute;
+                            width: 300px;
+                            height: 50px;
+                            }
+                        }
+                    }
+                }  
+            }
+        }
+    }
+}
+
+@keyframes aboutAni{
+    0%{width: 0%; opacity: 0; }
+    50%{ opacity: 1; }
+    100%{width: 100%;}
+}
+
+@keyframes aboutAni2{
+    0%{width: 0%; opacity: 0; }
+    50%{ opacity: 1; }
+    100%{width: 22%;}
+}
+
+@keyframes aboutAni3{
+    0%{ transform:rotate(0deg); }
+    100%{ transform:rotate(360deg); }
+}

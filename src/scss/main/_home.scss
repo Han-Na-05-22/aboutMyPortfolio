@@ -1,0 +1,329 @@
+#Home{
+    width: 100%;
+    height: 100%;
+
+    >.inner{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        >.wrap{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            .homeContent{
+                width: 60%;
+                height: 100%;
+                position: relative;
+                padding:30px 0px 0px 10px;
+                overflow: hidden;
+
+                h2{
+                    font:bold 80px/90px 'Josefin Sans';
+                    letter-spacing: 1.5px;
+                    position: absolute;
+                    transition: 1s;
+                    color:rgba(0, 0,0,0.7);
+                    
+                    &::after{
+                        position: absolute;
+                        bottom: 15px;
+                        left:13%;
+                        height: 30px;
+                        background: rgba(255, 192, 203, 0.7);
+                        display: block;
+                        z-index:-1;
+                        content: '';
+                        animation: homeAni3 1.5s linear;
+                        animation-fill-mode: forwards;
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-of-type(1){
+                        transform: translateX(-200%);
+                        top: 57.5px;
+                        animation: homeAni 1s linear;
+                        animation-fill-mode: forwards;
+                    }
+
+                    &:nth-of-type(2){
+                        transform: translateX(200%);
+                        top: 23%;
+                        animation: homeAni2 1s linear;
+                        animation-fill-mode:forwards;                           
+                    }
+                }
+
+                .sayHello{
+                    width: 200px;
+                    height: 300px;
+                    position: absolute;
+                    bottom: -15px;
+                    left: -30%;
+                    animation: homeAni4 10s linear;
+                    animation-delay: 3s;
+
+                    img{
+                        width: 150px;
+                        height: 250px;
+                        object-fit: cover;
+                        position: absolute;
+                        bottom: 0;
+                    }
+
+                    .svg-inline--fa.fa-comment {
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        top: 30px;
+                        right: 50px;
+
+                        path{
+                            stroke:#333;
+                            fill:#333;
+                            stroke-width: 0px;
+                        }
+                    }
+
+                    span{
+                        font:bold 18px/1 'Josefin Sans';
+                        color:#fff;
+                        position: absolute;
+                        top: 46px;
+                        right: 63px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                .message{
+                    position: absolute;
+                    width: 100%;
+                    top: 36.5%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                    img{
+                        width: 250px;
+                        height: 200px;
+                        object-fit: cover;
+                        opacity: 1;
+                    }
+
+                    .homeAni{
+                        width: 55%;
+                        height: 100px;
+                        position: relative;
+                        z-index:-1;
+                        padding:25px 32.5px;
+                        background: rgba(255, 192, 203, 0.65);
+                        opacity: 1;
+                        transition: 2s;
+
+                        &.off{
+                            background: none;
+
+                            p{
+                                opacity: 0;
+                            }
+                        }
+
+                        &::before{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 0px;
+                            height: 2px;
+                            background: rgba(255, 192, 203, 0.65);
+                            top: 50%;
+                            left: -75px;
+                            transform: translateY(-50%);
+                            animation: homeAni6 1s linear;
+                            animation-fill-mode: forwards;
+                            animation-delay: 1.5s;
+                        }
+
+                        .top{
+                            position: absolute;
+                            top: 0;
+                            width: 0%;
+                            height: 1px;
+                            left: 0;
+                            background: rgba(255, 192, 203, 0.65);
+                        }
+                        
+                        .right{
+                            width: 1px;
+                            height: 0%;
+                            background: rgba(255, 192, 203, 0.65);
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+
+                        .bottom{
+                            position: absolute;
+                            bottom: 0;
+                            width: 0%;
+                            height: 1px;
+                            right: 0;
+                            background: rgba(255, 192, 203, 0.65);
+                        }
+                        
+                        .left{
+                            width: 1px;
+                            height: 0%;
+                            background: rgba(255, 192, 203, 0.65);
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                        }
+
+                        p{
+                            color:#fff;
+                            font:bold 15px/27.5px '맑은 고딕';
+                            letter-spacing: 1px;
+                            position: absolute;
+                            opacity: 1;
+                            transition: 2s;
+                        }
+                    }
+
+                }
+
+
+                strong{
+                    display: block;
+                    color:rgba(0,0,0,.75);
+                    font:bold 42.5px/1 'Josefin Sans';
+                    position: absolute;
+                    bottom: 50px;
+                    left: 100%;
+                    opacity: 0;
+                    animation: homeAni7 10s linear;
+                    animation-fill-mode: forwards;
+                    animation-delay: 9.7s;
+                    width: 90%;
+                }
+
+                >ul{
+                    width: 95%;
+                    display: flex;
+                    left: 6.5%;
+                    position: absolute;
+                    bottom: 19%;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    li{
+                        position: relative;
+                        opacity: 0;
+
+                        .svg-inline--fa{
+                            font-size: 75px;
+                            opacity: 0.8;
+                        }
+
+                        &:nth-child(1){
+                            animation: homeAni8 1.5s linear;
+                            animation-fill-mode: forwards;
+                            animation-delay: 19.7s;
+
+                            .svg-inline--fa{
+                                path{
+                                    fill: rgb(255, 102, 0);
+                                }
+                            }
+                        }
+
+                        &:nth-child(2){
+                            animation: homeAni8 1.5s linear;
+                            animation-fill-mode: forwards;
+                            animation-delay: 19.9s;
+
+                            .svg-inline--fa{
+                                path{
+                                    fill: rgb(3, 59, 179);
+                    
+                                }
+                            }
+                        }
+
+                        &:nth-child(3){
+                            animation: homeAni8 1.5s linear;
+                            animation-fill-mode: forwards;
+                            animation-delay:20.1s;
+
+                            .svg-inline--fa{
+                                path{
+                                    fill: rgba(233, 219, 20, 0.883);
+                                }
+                            }
+                        }
+
+                        &:nth-child(4){
+                            animation: homeAni8 1.5s linear;
+                            animation-fill-mode: forwards;
+                            animation-delay:20.3s;
+
+                            .svg-inline--fa{
+                                path{
+                                    fill: rgba(14, 206, 206, 0.87);
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes homeAni{
+    0%{opacity: 0; transform: translateX(-200%);}
+    100%{opacity: 1; transform: translateX(0%);}
+}
+
+@keyframes homeAni2{
+    0%{opacity: 0; transform: translateX(200%);}
+    100%{opacity: 1; transform: translateX(0%);}
+}
+
+@keyframes homeAni3{
+    0%{width: 0%; opacity: 0; }
+    50%{ opacity: 1; }
+    100%{width: 90%;}
+}
+
+@keyframes homeAni4{
+    0%{left:-10%; opacity: 0;}
+    70%{left:90%; opacity: 1;}
+    80%{left:100%; opacity: 0;}
+    100%{left:-10%; opacity: 0;}
+}
+
+@keyframes homeAni5{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes homeAni6{
+    0%{width: 0px;}
+    100%{width: 100px;}
+}
+
+@keyframes homeAni7{
+    0%{opacity: 0; left: 100%; width: 250%; font-size: 100px; color:rgba(0,0,0,.2);}
+    80%{bottom: 50px; left:-150%; opacity: 1;}
+    83%{opacity: 0; bottom:-10%;}
+    90%{opacity: 0; width: 90%; left:65px; bottom:0px; font-size: 42.5px;}
+    100%{opacity: 1;  left:65px; bottom:50px;}
+}
+
+@keyframes homeAni8{
+    0%{opacity: 0; bottom:-100px;}
+    100%{opacity: 1; bottom:0px;}
+}
+

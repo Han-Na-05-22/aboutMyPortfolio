@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    color:#111;
+}
+
+ul,ol,li{list-style: none;}
+
+a{
+    text-decoration: none;
+    color:#333;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+label,input{
+    vertical-align: middle;
+}
+
+.h{
+    position: absolute;
+    top: -99999px;
+    opacity: 0;
+}
+
+fieldset{
+    border:none;
+}
+
