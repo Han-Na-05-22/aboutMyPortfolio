@@ -4,6 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+gulpfile.js
+package.json
+package-lock.json
+/img
+/music
+/class
+/DB
 
 # testing
 /coverage
