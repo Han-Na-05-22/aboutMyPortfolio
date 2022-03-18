@@ -83,104 +83,106 @@ export default function About(){
     },[]);
     
     return(
-        <main className="content about">
+        <section id="About" ref={about}>
             <div className="inner">
-                <section id="About" ref={about}>
-                    <div className="inner">
-                        <div className="wrap">
-                        <Nav />
-                        <article className="aboutContent">
-                            <div className="aboutMe">
-                                <h2>ABOUT ME</h2>
-                                <p>
-                                    안녕하세요. 코딩하는 것이 즐거운 미래의 프론트엔드 개발자 이한나입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero nulla incidunt exercitationem molestiae corporis at voluptatem quae earum eos, iure explicabo placeat accusamus fugiat impedit doloribus sequi beatae ducimus libero doloremque. Eaque, voluptates? Sint atque ipsa similique nam pariatur totam iste minus accusamus enim.
-                                </p>
-                            </div>
-                            <div className="mySkill">
-                                <h2>MY SKILL</h2>
-                                <ul>
-                                    <li>
-                                        <img src={`${path}/img/pp.png`}></img>
-                                    </li>
-                                    <li> 
-                                        <img src={`${path}/img/ex.png`}></img>
-                                    </li>
-                                    <li>
-                                        <img src={`${path}/img/ps.png`}></img>
-                                    </li>
-                                    <li>
-                                        <img src={`${path}/img/html.png`}></img>
-                                    </li>
-                                    <li>
-                                        <img src={`${path}/img/css.png`}></img>
-                                    </li>
-                                    <li>
-                                        <img src={`${path}/img/js.png`}></img>
-                                    </li>
-                                    <li>
-                                        <img src={`${path}/img/react.png`}></img>
-                                    </li>
-                                    <li>
-                                        <img src={`${path}/img/redux.png`}></img>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="music">
-                                <h2>MUSIC PLAYER</h2>
-                                <Swiper modules={[Navigation]}
-                                spaceBetween={100}
-                                slidesPerView={1.5}
-                                centeredSlides={true}
-                                navigation
-                                loop={true}
-                                >
-                                    <SwiperSlide onClick={()=>{}}>
-                                        <div className="wrap">
-                                            <div className="txt">
-                                                <strong>Music01</strong>
-                                                <span>- hanna -</span>
-                                            </div>
-                                            <div className="pic">
-                                                <img src={`${path}/img/music01.png`} />
-                                            </div>
-                                            <audio muted controls src={music1}>
-                                            </audio>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide onClick={()=>{}}>
-                                        <div className="wrap">
-                                            <div className="txt">
-                                                <strong>Music02</strong>
-                                                <span>- hanna -</span>
-                                            </div>
-                                            <div className="pic">
-                                                <img src={`${path}/img/music04.png`} />
-                                            </div>
-                                            <audio muted controls src={music2}>
-                                            </audio>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide onClick={()=>{}}>
-                                        <div className="wrap">
-                                            <div className="txt">
-                                                <strong>Music03</strong>
-                                                <span>- hanna -</span>
-                                            </div>
-                                            <div className="pic">
-                                                <img src={`${path}/img/music05.png`} />
-                                            </div>
-                                            <audio muted controls src={music3}>
-                                            </audio>
-                                        </div>
-                                    </SwiperSlide>
-                                </Swiper>
-                             </div>
-                        </article>
-                        <Profile />
-                        </div>
+                <div className="wrap">
+                <article className="aboutContent">
+                    <div className="aboutMe">
+                        <h2>ABOUT ME</h2>
+                        <p>
+                            안녕하세요. 코딩하는 것이 즐거운 미래의 프론트엔드 개발자 이한나입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero nulla incidunt exercitationem molestiae corporis at voluptatem quae earum eos, iure explicabo placeat accusamus fugiat impedit doloribus sequi beatae ducimus libero doloremque. Eaque, voluptates? Sint atque ipsa similique nam pariatur totam iste minus accusamus enim.
+                        </p>
                     </div>
-                </section>
+                    <div className="mySkill">
+                        <h2>MY SKILL</h2>
+                        <ul>
+                            <li>
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/ex.png`}></img>
+                            </li>
+                            <li> 
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/ps.png`}></img>
+                            </li>
+                            <li>
+                            <div className="boxBg"></div>
+                                <img src={`${path}/img/html.png`}></img>
+                            </li>
+                            <li>
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/css.png`}></img>
+                            </li>
+                            <li>
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/scss.png`}></img>
+                            </li>
+                            <li>
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/js.png`}></img>
+                            </li>
+                            <li>
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/react.png`}></img>
+                            </li>
+                            <li>
+                                <div className="boxBg"></div>
+                                <img src={`${path}/img/redux.png`}></img>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="music">
+                        <h2>MUSIC PLAYER</h2>
+                        <Swiper modules={[Navigation]}
+                        spaceBetween={100}
+                        slidesPerView={1}
+                        centeredSlides={true}
+                        navigation
+                        loop={true}
+                        >
+                            <SwiperSlide onClick={()=>{}}>
+                                <div className="wrap">
+                                    <div className="txt">
+                                        <strong>Music01</strong>
+                                        <span>- hanna -</span>
+                                    </div>
+                                    <div className="pic">
+                                        <img src={`${path}/img/music01.png`} />
+                                    </div>
+                                    <audio muted controls src={music1}>
+                                    </audio>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide onClick={()=>{}}>
+                                <div className="wrap">
+                                    <div className="txt">
+                                        <strong>Music02</strong>
+                                        <span>- hanna -</span>
+                                    </div>
+                                    <div className="pic">
+                                        <img src={`${path}/img/music01.png`} />
+                                    </div>
+                                    <audio muted controls src={music2}>
+                                    </audio>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide onClick={()=>{}}>
+                                <div className="wrap">
+                                    <div className="txt">
+                                        <strong>Music03</strong>
+                                        <span>- hanna -</span>
+                                    </div>
+                                    <div className="pic">
+                                        <img src={`${path}/img/music01.png`} />
+                                    </div>
+                                    <audio muted controls src={music3}>
+                                    </audio>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                        </div>
+                </article>
+                </div>
             </div>
-        </main>
+        </section>
     );
 }

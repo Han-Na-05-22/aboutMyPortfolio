@@ -4,13 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
-gulpfile.js
-package.json
-package-lock.json
-img
-/music
-/class
-/DB
+# gulpfile.js
+# package.json
+# package-lock.json
+# /music
+# /class
+# /DB
+# /.vscode
 
 # testing
 /coverage

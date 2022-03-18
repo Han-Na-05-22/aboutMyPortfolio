@@ -1,46 +1,151 @@
 .App{
-    height: 100vh;
+    height: 935px;
+    padding:100px 0px;
+    overflow: hidden;
+    position: relative;
 
-    .content{
-        height: 935px;
-        padding:100px 0px;
+    main{
+        height: 100%;
+        width: 1180px;
+        margin: 0 auto;
         overflow: hidden;
-        position: relative;
-    
-        >.inner{
-            height: 100%;
-            width: 1180px;
-            margin: 0 auto;
-            overflow: hidden;
-            background: rgba(255,255,255,.25);
-            border-radius: 15px;
-            box-shadow: 3px 3px 5px rgba(0,0,0,.1);
-            transform: perspective(700px);
-            padding:30px;
-    
-            >section{
-                width: 100%;
-                height: 100%;
-    
-                >.inner{
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    
-                    >.wrap{
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-    
-                        article{
-                            &:nth-of-type(1){
-                                width: 60%;
-                                height: 100%;
-                                position: relative;
-                                padding:30px 0px 0px 10px;
-                                overflow: hidden;
-                                // border:1px solid red;
+        background: rgba(255,255,255,.25);
+        border-radius: 15px;
+        box-shadow: 3px 3px 5px rgba(0,0,0,.1);
+        transform: perspective(700px);
+        padding:30px;
+        display: flex;
+        align-items: center;
+
+        &.주황{
+
+            #nav{
+                background:rgba(255, 220, 192, 0.7);
+                .gnb{
+                    li a{
+                        &.active{
+                            color:rgba(253, 201, 158, 0.8);;
+                            .svg-inline--fa path{fill:rgba(253, 201, 158, 0.8);;}
+                        }
+                    }
+                }
+            }
+
+            #Home{
+                .homeContent{
+                    h2{
+                        &::after{background:rgba(255, 220, 192, 0.7);}
+                    }
+                    .message{
+                        .homeAni{
+                            background:rgba(255, 220, 192, 0.65);
+                            &::before{
+                                background:rgba(255, 220, 192, 0.65);
                             }
+                            .top,.right,.bottom,.left{
+                                background:rgba(255, 220, 192, 0.65);
+                            }
+                        }
+                    }
+                }
+            }
+
+            #Profile{
+                .myphoto{
+                    ul li{
+                        &:hover{
+                            .svg-inline--fa path{fill:rgba(253, 201, 158, 0.8);;}
+                            b{color:rgba(253, 201, 158, 0.8);;}
+                        }
+                    } 
+                }
+                .dateTime{
+                    &:hover strong{color:rgba(253, 201, 158, 0.8);;}
+                }
+            }
+
+            #About{
+                .aboutContent{
+                    .aboutMe{h2{&::after{background:rgba(255, 220, 192, 0.7);}} }
+                    .mySkill{h2{&::after{background:rgba(255, 220, 192, 0.7);}} }
+                    .music{h2{&::after{background:rgba(255, 220, 192, 0.7);}} }
+                }
+            }
+
+            #Myportfolio{
+                .myportfolioContent{
+                    h2{&::after{background:rgba(255, 220, 192, 0.7);}} 
+                    .wrap{
+                        #tab{
+                            dt{background:rgba(255, 220, 192, 0.7);}
+                        }
+                    }
+
+                }
+            }
+        }
+
+        &.보라{
+
+            #nav{
+                background:rgba(227, 192, 255, 0.7);
+                .gnb{
+                    li a{
+                        &.active{
+                            color:rgba(227, 192, 255, 0.9);
+                            .svg-inline--fa path{fill:rgba(227, 192, 255, 0.9);}
+                        }
+                    }
+                }
+            }
+
+            #Home{
+                .homeContent{
+                    h2{
+                        &::after{background:rgba(227, 192, 255, 0.7);}
+                    }
+                    .message{
+                        .homeAni{
+                            background: rgba(227, 192, 255, 0.5);
+                            &::before{
+                                background: rgba(227, 192, 255, 0.5);
+                            }
+                            .top,.right,.bottom,.left{
+                                background: rgba(227, 192, 255, 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+
+            #Profile{
+                .myphoto{
+                    ul li{
+                        &:hover{
+                            .svg-inline--fa path{fill:rgba(227, 192, 255, 0.9);}
+                            b{color:rgba(227, 192, 255, 0.9);}
+                        }
+                    } 
+                }
+                .dateTime{
+                    &:hover strong{color:rgba(227, 192, 255, 0.9);}
+                }
+            }
+
+            #About{
+                .aboutContent{
+                    .aboutMe{h2{&::after{background:rgba(227, 192, 255, 0.7);}} }
+                    .mySkill{h2{&::after{background:rgba(227, 192, 255, 0.7);}} }
+                    .music{h2{&::after{background:rgba(227, 192, 255, 0.7);}} }
+                }
+            }
+
+            #Myportfolio{
+                .myportfolioContent{
+                    h2{&::after{background:rgba(227, 192, 255, 0.7);}} 
+                    .wrap{
+                        #tab{
+                            dt{background:rgba(227, 192, 255, 0.45);}
                         }
                     }
                 }
@@ -54,47 +159,61 @@
         object-fit: cover;
         height: 350px;
         // border:1px solid red;
-        width: 1500px;
-        left: -1500px;
+        width: 1000px;
+        left: -1000px;
 
         &:nth-of-type(1){
             top:0px;
             transform: rotate(180deg);
-            animation: cloudAni 60s linear infinite;
+            animation: cloudAni 40s linear infinite;
         }
 
         &:nth-of-type(2){
-            top:0px;
-            transform: rotate(180deg);
-            animation: cloudAni 60s 25s linear infinite;
-        }
-
-        &:nth-of-type(3){
-            top:0px;
-            transform: rotate(180deg);
-            animation: cloudAni 60s 40s linear infinite;
-        }
-
-        &:nth-of-type(4){
             bottom:0px;
-            animation: cloudAni 60s linear infinite;
-        }
-
-        &:nth-of-type(5){
-            bottom:0px;
-            animation: cloudAni 60s 25s linear infinite;
-        }
-
-        &:nth-of-type(6){
-            bottom:0px;
-            animation: cloudAni 60s 40s linear infinite;
+            animation: cloudAni 50s 10s linear infinite;
         }
     }
 }
 
 @keyframes cloudAni{
-    0%{opacity: 0.3; left:-1500px;}
-    90%{opacity: 1; left:1500px;}
-    95%{opacity: 0; left:1900px;}
-    100%{opacity: 0; left:-1500px;}
+    0%{opacity: 0.3; left:-1000px;}
+    90%{opacity: 1; left:1000px;}
+    95%{opacity: 0; left:1100px;}
+    100%{opacity: 0; left:-1000px;}
+}
+
+@media screen and(max-width:1179px){
+    .App{
+        margin: 0px 20px;
+        padding:130px 0px;
+
+        main{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and(max-width:959px){
+    .App{
+        padding:100px 0px;
+
+        main{position: relative;}
+    }
+}
+
+@media screen and(max-width:779px){
+    .App{padding:80px 0px;}
+}
+
+@media screen and(max-width:539px){
+    .App{
+        padding:0px;
+        height:100vh;
+        margin: 0px;
+        
+        main{
+            padding: 0px;
+            border-radius: 0px;
+        }
+    }
 }
