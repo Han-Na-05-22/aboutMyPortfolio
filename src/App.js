@@ -50,6 +50,10 @@ function App() {
       'http://localhost:3000/aboutMyPortfolio/img/react.png',
       'http://localhost:3000/aboutMyPortfolio/img/redux.png',
       'http://localhost:3000/aboutMyPortfolio/img/music01.png',
+      'http://localhost:3000/aboutMyPortfolio/img/music04.png',
+      'http://localhost:3000/aboutMyPortfolio/img/music05.png',
+      'http://localhost:3000/aboutMyPortfolio/img/music06.png',
+      'http://localhost:3000/aboutMyPortfolio/img/music07.png',
       'http://localhost:3000/aboutMyPortfolio/img/pf01.png',
       'http://localhost:3000/aboutMyPortfolio/img/pf02.png',
       'http://localhost:3000/aboutMyPortfolio/img/pf03.png',
@@ -67,6 +71,11 @@ function App() {
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/react.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/redux.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music01.png',
+          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music01.png',
+          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music04.png',
+          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music05.png',
+          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music06.png',
+          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music07.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/pf01.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/pf02.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/pf03.png',
@@ -80,7 +89,13 @@ function App() {
   return (
     <div className="App">
         <main className='content'>
+
           <Nav />
+          <Switch>
+
+            <Route exact path='/' component={Home}></Route>
+          </Switch>
+
           <Route path='/home' component={Home}></Route>
           <Route path='/about' component={About}></Route>
           <Route path='/myportfolio' component={Myportfolio}></Route>

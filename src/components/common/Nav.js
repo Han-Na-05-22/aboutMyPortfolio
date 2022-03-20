@@ -20,7 +20,6 @@ export default function Nav(props){
                 for(let el of lists){
                     el.classList.remove("on");
                     mains.classList.remove("분홍","주황","보라");
-         
                 }
   
                 lists[index].classList.add("on");
@@ -47,7 +46,7 @@ export default function Nav(props){
     return(
         <>
             <nav id="nav" className={props.type}>
-                <h1><NavLink to='/home'>HANNA</NavLink></h1>
+                <h1><NavLink exact to='/home'>HANNA</NavLink></h1>
                 <Gnb />
                 <ul className="changeColor">
                         <li className="on"><b>■</b></li>
@@ -64,7 +63,7 @@ function Gnb(props){
     return(
         <ul className="gnb">
         <li>
-            <NavLink to='/home'>
+            <NavLink exact to='/home'>
             <FontAwesomeIcon icon={faHome} />
             HOME
             </NavLink>

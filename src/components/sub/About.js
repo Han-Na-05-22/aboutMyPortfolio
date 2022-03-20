@@ -1,13 +1,10 @@
-import Profile from '../common/Profile';
-import Nav from '../common/Nav';
 import {useEffect,useState,useRef} from 'react';
-import axios from 'axios';
 import music1 from '../../music/1.mp3';
 import music2 from '../../music/2.mp3';
 import music3 from '../../music/3.mp3';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleNotch, faPause } from '@fortawesome/free-solid-svg-icons';
+import { faPause } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,65 +18,93 @@ export default function About(){
 
     const about = useRef(null);
     const path = process.env.PUBLIC_URL;
-    const lists = document.querySelectorAll(".music .wrap");
-    
-    // audios.forEach((zz,index)=>{
-    //     zz.addEventListener("click",e=>{
-    //         e.preventDefault();
-    //         audios[index].classList.add("on");
+    const [items, setItems] = useState([]);
 
-    //         // let isOn = audios[index].classList.contains("on"); 
-    //         // console.log(isOn);
+    const createDOM = async () =>{
+        await fetch(`${path}/DB/data.json`)
+        .then(data=>{
+            return data.json();
+        })
+        .then(json=>{
+            
+            json.data[0].audio = music1;
+            json.data[1].audio = music2;
+            json.data[2].audio = music3;
+            json.data[3].audio = music1;
+            json.data[4].audio = music3;
 
-    //         // if(isOn){
-                
-    //         //     audios[index].classList.remove("on");
-    //         // }
-    //         // audios[index].classList.add("on");
-    //     })
-    // })
+            setItems(json.data);
+            let items="";
+        })
+    }
 
-
-    // if(audios.play()){
-    //     lists.forEach((btn,index)=>{
-    //         btn.addEventListener("click",e=>{
-    //             e.preventDefault();
-
-    //             for(let el of lists){
-    //                 el.classList.remove("on");
-    //             }
-    //             lists[index].classList.add("on");
-    //         })
-    //     })
-    // }
-
-  
-        // pauses.forEach((btn2,index2)=>{
-        //     btn2.addEventListener("click",e=>{
-        //         e.preventDefault();
-
-        //         for(let el of lists){
-        //             el.classList.remove("on");
-        //         }
-        //         lists[index2].classList.remove("on");
-        //     })
-        // })
+    let lists,audios,imgs,plays,pauses,loads;
 
 
+    function stopMusic(){
+        for(let el of audios){
+            el.pause();
+        }
+    }
 
-        // loads.forEach((btn,index)=>{
-        //     btn.addEventListener("click",e=>{
-        //         e.preventDefault();
+    const aboutMusic = () =>{
 
-        //         for(let el of lists){
-        //             el.classList.remove("on");
-        //         }
-        //         lists[index].classList.add("on");
-        //     })
-        // })
+        audios = document.querySelectorAll(".music audio");
+        imgs = document.querySelectorAll(".music img");
+        plays = document.querySelectorAll(".music ul .play");
+        pauses = document.querySelectorAll(".music ul .pause");
+        loads = document.querySelectorAll(".music ul .load");
+
+        plays.forEach((btn,idx)=>{
+            btn.addEventListener("click",e=>{
+                e.preventDefault();
+
+                stopMusic();
+
+                lists = document.querySelectorAll(".music .wrap");
+
+                for(let el of lists){
+                    el.classList.remove("on");
+                }
+                lists[idx].classList.add("on");
+                audios[idx].play();
+            })
+        })
+
+        pauses.forEach((btn,idx)=>{
+            btn.addEventListener("click",e=>{
+                e.preventDefault();
+
+                lists = document.querySelectorAll(".music .wrap");
+
+                for(let el of lists){
+                    el.classList.remove("on");
+                    audios[idx].pause();
+                }
+            })
+        })
+
+
+        loads.forEach((btn,idx)=>{
+            btn.addEventListener("click",e=>{
+                e.preventDefault();
+
+                lists = document.querySelectorAll(".music .wrap");
+
+                for(let el of lists){
+                    el.classList.remove("on");
+                    stopMusic();
+                }                
+                lists[idx].classList.add("on");
+                audios[idx].play();
+            })
+        })
+    }
 
     useEffect(()=>{
         about.current.classList.add("on");
+        createDOM();
+        aboutMusic();
     },[]);
     
     return(
@@ -90,7 +115,12 @@ export default function About(){
                     <div className="aboutMe">
                         <h2>ABOUT ME</h2>
                         <p>
-                            안녕하세요. 코딩하는 것이 즐거운 미래의 프론트엔드 개발자 이한나입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero nulla incidunt exercitationem molestiae corporis at voluptatem quae earum eos, iure explicabo placeat accusamus fugiat impedit doloribus sequi beatae ducimus libero doloremque. Eaque, voluptates? Sint atque ipsa similique nam pariatur totam iste minus accusamus enim.
+                        저는 하고자 하는 일에 있어서는 절대 주춤하지 않고 도전하며 실천하는 한다면 하는 사람입니다.
+                        제가 좋아하는 취미, 공부, 운동 등 지금까지도 꾸준히 해오고 있으며,
+                        시간의 소중함을 잊지 않고 항상 나 자신의 발전을 위해 끊임없이 노력하고 있습니다.
+                        홈페이지 제작하는 것을 처음 접했을 때 제가 작업한 코드에 대한 결과물을 바로 눈으로 확인할 수 있어서 흥미로웠으며,
+                        공부를 계속 해나갈 때쯤에 문득, "아! 내가 지금 단순히 텍스트 박스 하나를 만들어서 보여주는 게 아닌 좀 더 시각적인 효과를 넣어서 만들어 보면 어떨까?" 등등
+                        여러 가지 부분에 대해서 생각하게 되었고 그 결과 현재는 사람들이 조금 더 쉽고 편리하게 이용할 수 있고 인터랙티브한 홈페이지를 만드는 게 저의 꿈이 되었습니다.
                         </p>
                     </div>
                     <div className="mySkill">
@@ -131,55 +161,42 @@ export default function About(){
                         </ul>
                     </div>
                     <div className="music">
-                        <h2>MUSIC PLAYER</h2>
                         <Swiper modules={[Navigation]}
-                        spaceBetween={100}
+                        spaceBetween={50}
                         slidesPerView={1}
                         centeredSlides={true}
                         navigation
                         loop={true}
                         >
-                            <SwiperSlide onClick={()=>{}}>
-                                <div className="wrap">
-                                    <div className="txt">
-                                        <strong>Music01</strong>
-                                        <span>- hanna -</span>
-                                    </div>
-                                    <div className="pic">
-                                        <img src={`${path}/img/music01.png`} />
-                                    </div>
-                                    <audio muted controls src={music1}>
-                                    </audio>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide onClick={()=>{}}>
-                                <div className="wrap">
-                                    <div className="txt">
-                                        <strong>Music02</strong>
-                                        <span>- hanna -</span>
-                                    </div>
-                                    <div className="pic">
-                                        <img src={`${path}/img/music01.png`} />
-                                    </div>
-                                    <audio muted controls src={music2}>
-                                    </audio>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide onClick={()=>{}}>
-                                <div className="wrap">
-                                    <div className="txt">
-                                        <strong>Music03</strong>
-                                        <span>- hanna -</span>
-                                    </div>
-                                    <div className="pic">
-                                        <img src={`${path}/img/music01.png`} />
-                                    </div>
-                                    <audio muted controls src={music3}>
-                                    </audio>
-                                </div>
-                            </SwiperSlide>
+                            {items.map((item,idx)=>{
+                                return(
+                                    <SwiperSlide key={idx} onClick={()=>{}}>
+                                        <div className="wrap">
+                                            <div className="pic">
+                                                <img src={`${path}/img/${item.pic}`}/>
+                                            </div>
+                                            <div className="txt">
+                                                <strong>{item.title}</strong>
+                                                <span>{item.name}</span>
+                                            </div>
+                                            <ul>
+                                                <li className="play">
+                                                    <FontAwesomeIcon icon={faPlay} />
+                                                </li>
+                                                <li className="pause">
+                                                    <FontAwesomeIcon icon={faPause} />
+                                                </li>
+                                                <li className="load">
+                                                    <FontAwesomeIcon icon={faRedo} />
+                                                 </li>
+                                                <audio src={item.audio} />
+                                            </ul>
+                                        </div>
+                                    </SwiperSlide>
+                                )
+                            })}
                         </Swiper>
-                        </div>
+                    </div>
                 </article>
                 </div>
             </div>

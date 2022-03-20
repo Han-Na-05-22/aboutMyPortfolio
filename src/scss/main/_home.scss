@@ -119,6 +119,9 @@
                         background: rgba(255, 192, 203, 0.65);
                         opacity: 1;
                         transition: 2s;
+                        display:flex;
+                        align-items: center;
+                        justify-content: center;
 
                         &.off{
                             background: none;
@@ -183,7 +186,6 @@
                             color:#fff;
                             font:bold 15px/27.5px '맑은 고딕';
                             letter-spacing: 1px;
-                            position: absolute;
                             opacity: 1;
                             transition: 2s;
                         }
@@ -410,11 +412,11 @@
 
 @media screen and(max-width:779px){
     #Home{
-        width:calc(100% - 60px);
+        width: 100%;
         height: 65.5%;
-        top: 30.5%;
-        left: 30px;
-        background: #fff;
+        top: 30.3%;
+        left: 0px;
+        background:rgba(255,255,255,.3);
         border-radius: 0px 0px 15px 15px;
         padding:5px 15px;
         z-index:0;
@@ -466,10 +468,46 @@
 }
 
 @media screen and(max-width:539px){
+    .App{
+        main{
+            &.주황{
+                #Home{
+                    .homeContent{
+                        .message{
+                            .homeAni{
+                                &::After{
+                                    background:rgba(255, 220, 192, 0.65);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .App{
+        main{
+            &.보라{
+                #Home{
+                    .homeContent{
+                        .message{
+                            .homeAni{
+                                &::After{
+                                    background:rgba(227, 192, 255, 0.7);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     #Home{
         width: 100%;
         height: 78%;
-        top: 22.8%;
+        top: 23%;
         left: 0px;
         border-radius: 0;
         padding:0;
@@ -519,7 +557,7 @@
                                 animation-delay: 1.5s;
                             }
     
-                            p{font:bold 15px/22px '맑은 고딕';}
+                            p{font:bold 14px/22px '맑은 고딕';}
                         }
                     }
     

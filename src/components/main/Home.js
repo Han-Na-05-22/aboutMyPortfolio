@@ -17,56 +17,55 @@ export default function Home(){
     const path = process.env.PUBLIC_URL;
     const home = useRef(null);
 
-    let homeAnis,lineTop,lineRight,lineBottom,lineLeft,house;
+    let homeAnis,lineTop,lineRight,lineBottom,lineLeft;
 
     const homeAni = () =>{
         homeAnis=document.querySelector(".message .homeAni");
-        lineTop = homeAnis.querySelector(".top");
-        lineRight = homeAnis.querySelector(".right");
-        lineBottom = homeAnis.querySelector(".bottom");
-        lineLeft = homeAnis.querySelector(".left");
-        house=document.querySelector("#Home");
+        lineTop = document.querySelector(".top");
+        lineRight = document.querySelector(".right");
+        lineBottom = document.querySelector(".bottom");
+        lineLeft = document.querySelector(".left");
 
-        if(house.classList.contains("on")){
-            new anime(lineTop,{
-                prop:"width",
-                value:"100%",
-                duration:1000,
-                callback:()=>{
+        new anime(lineTop,{
+            prop:"width",
+            value:"100%",
+            duration:1000,
+            callback:()=>{
 
-                    new anime(lineRight,{
-                        prop : "height",
-                        value : "100%",
-                        duration:1000,
-                        callback:()=>{
-        
-                            new anime(lineBottom,{
-                                prop : "width",
-                                value : "100%",
-                                duration:1000,
-                                callback:()=>{
-        
-                                    new anime(lineLeft,{
-                                        prop:"height",
-                                        value : "100%",
-                                        duration:1000,
-                                        callback:()=>{
-        
-                                            homeAnis.classList.remove("off");
-                                        }
-                                    })
-                                }
-                            })
-                        }
-                    })
-                }
-            })
-        }
+                new anime(lineRight,{
+                    prop : "height",
+                    value : "100%",
+                    duration:1000,
+                    callback:()=>{
+    
+                        new anime(lineBottom,{
+                            prop : "width",
+                            value : "100%",
+                            duration:1000,
+                            callback:()=>{
+    
+                                new anime(lineLeft,{
+                                    prop:"height",
+                                    value : "100%",
+                                    duration:1000,
+                                    callback:()=>{
+    
+                                        homeAnis.classList.remove("off");
+                                    }
+                                })
+                            }
+                        })
+                    }
+                })
+            }
+        })
     }
 
     useEffect(()=>{
         home.current.classList.add("on");
-        setTimeout(homeAni,2500);
+        if(home.current.classList.contains("on")){
+            setTimeout(homeAni,2500);
+        }
     },[]);
 
     return(
