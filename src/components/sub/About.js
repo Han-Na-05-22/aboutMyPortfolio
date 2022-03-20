@@ -51,9 +51,9 @@ export default function About(){
 
         audios = document.querySelectorAll(".music audio");
         imgs = document.querySelectorAll(".music img");
-        plays = document.querySelectorAll(".music ul .play");
-        pauses = document.querySelectorAll(".music ul .pause");
-        loads = document.querySelectorAll(".music ul .load");
+        plays = document.querySelectorAll(".music .play");
+        pauses = document.querySelectorAll(".music .pause");
+        loads = document.querySelectorAll(".music .load");
 
         plays.forEach((btn,idx)=>{
             btn.addEventListener("click",e=>{

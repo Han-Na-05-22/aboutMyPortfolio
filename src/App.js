@@ -57,7 +57,7 @@ function App() {
       'http://localhost:3000/aboutMyPortfolio/img/pf01.png',
       'http://localhost:3000/aboutMyPortfolio/img/pf02.png',
       'http://localhost:3000/aboutMyPortfolio/img/pf03.png',
-      'http://localhost:3000/aboutMyPortfolio/img/member5.jpeg'
+      'http://localhost:3000/aboutMyPortfolio/img/Me.jpg'
 
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/cloud1.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/coding.gif',
@@ -71,15 +71,15 @@ function App() {
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/react.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/redux.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music01.png',
-          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music01.png',
-          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music04.png',
-          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music05.png',
-          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music06.png',
-          // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music07.png',
+      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music01.png',
+      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music04.png',
+      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music05.png',
+      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music06.png',
+      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/music07.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/pf01.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/pf02.png',
       // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/pf03.png',
-      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/member5.jpeg'
+      // 'https://han-na-05-22.github.io/aboutMyPortfolio/img/Me.jpg'
 
     ]
 

@@ -69,10 +69,10 @@ export default function Myportfolio(){
                             </dt>
                             <dd>
                                 <a href="https://han-na-05-22.github.io/ReactPortfolio/" target="_blank" >
-                                    https://han-na-05-22.github.io/ReactPortfolio
+                                    https://han-na-05-22.github.io/PORTFOLIO02
                                 </a>
                                 <div className="pic">
-                                    <a href="https://han-na-05-22.github.io/ReactPortfolio/" target="_blank" >
+                                    <a href="https://han-na-05-22.github.io/PORTFOLIO02/#/" target="_blank" >
                                         <img src={`${path}/img/pf02.png`}></img>
                                     </a>
                                 </div>

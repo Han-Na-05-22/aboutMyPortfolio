@@ -37,7 +37,7 @@ export default function Profile(){
                 <div className="wrap">
                     <div className="myphoto">
                         <span>github.com/Han-Na-05-22</span>
-                        <img src={`${path}/img/member5.jpeg`}></img>
+                        <img src={`${path}/img/Me.jpg`}></img>
                         <strong>HANNA LEE</strong>
                         <ul>
                         <li>
