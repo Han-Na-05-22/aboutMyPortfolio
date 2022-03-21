@@ -76,12 +76,12 @@ export default function Home(){
                         <h2>HANNA'S</h2>
                         <h2>PORTFOLIO</h2>
                         <div className="sayHello">
-                            <img src={`${path}/img/sayHello.gif`}></img>
+                            <img src={`${path}/img/sayHello.gif`} alt="인사하기"></img>
                             <FontAwesomeIcon icon={faComment} />
                             <span>Hi</span>
                         </div>
                         <div className="message">
-                            <img src={`${path}/img/coding.gif`}></img>
+                            <img src={`${path}/img/coding.gif`} alt="코딩하는 컴퓨터"></img>
                             <div className="homeAni off">
                                 <div className="top"></div>
                                 <div className="right"></div>

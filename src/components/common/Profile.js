@@ -36,8 +36,8 @@ export default function Profile(){
             <div className="inner">
                 <div className="wrap">
                     <div className="myphoto">
-                        <span>github.com/Han-Na-05-22</span>
-                        <img src={`${path}/img/Me.jpg`}></img>
+                        <span>이력서 첨부예정</span>
+                        <img src={`${path}/img/Me.jpeg`} alt="내사진"></img>
                         <strong>HANNA LEE</strong>
                         <ul>
                         <li>

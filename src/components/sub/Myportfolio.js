@@ -52,7 +52,7 @@ export default function Myportfolio(){
                                 </a>
                                 <div className="pic">
                                     <a href="https://han-na-05-22.github.io/PORTFOLIO01/index" target="_blank" >
-                                        <img src={`${path}/img/pf01.png`}></img>
+                                        <img src={`${path}/img/pf01.png`} alt="첫번째 포트폴리오"></img>
                                     </a>
                                 </div>
                                 <span>＊사진 또는 위 링크를 클릭하시면 해당 포트폴리오 사이트로 이동합니다.</span>
@@ -69,11 +69,11 @@ export default function Myportfolio(){
                             </dt>
                             <dd>
                                 <a href="https://han-na-05-22.github.io/ReactPortfolio/" target="_blank" >
-                                    https://han-na-05-22.github.io/PORTFOLIO02
+                                    https://han-na-05-22.github.io/ReactPortfolio
                                 </a>
                                 <div className="pic">
-                                    <a href="https://han-na-05-22.github.io/PORTFOLIO02/#/" target="_blank" >
-                                        <img src={`${path}/img/pf02.png`}></img>
+                                    <a href="https://han-na-05-22.github.io/ReactPortfolio/" target="_blank" >
+                                        <img src={`${path}/img/pf02.png`} alt="두번째 포트폴리오"></img>
                                     </a>
                                 </div>
                                 <span>＊사진 또는 위 링크를 클릭하시면 해당 포트폴리오 사이트로 이동합니다.</span>
@@ -94,7 +94,8 @@ export default function Myportfolio(){
                                 </a>
                                 <div className="pic">
                                     <a href="https://han-na-05-22.github.io/aboutMyPortfolio/" target="_blank" >
-                                        <img src={`${path}/img/pf03.png`}></img>
+                                        <img src={`${path}/img/pf03.png`}
+                                        alt="자기소개 포트폴리오"></img>
                                     </a>
                                 </div>
                                 <span>＊사진 또는 위 링크를 클릭하시면 해당 포트폴리오 사이트로 이동합니다.</span>

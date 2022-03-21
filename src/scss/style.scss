@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
 @import 'common/reset';
 @import 'common/layout';
 @import 'common/nav';
@@ -10,8 +13,6 @@
 @import 'sub/about';
 @import 'sub/myportfolio';
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
 
 body{
     overflow-X: hidden;

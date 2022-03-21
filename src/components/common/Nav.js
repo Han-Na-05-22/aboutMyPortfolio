@@ -8,11 +8,11 @@ import { faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 export default function Nav(props){
 
-    const lists=document.querySelectorAll(".changeColor li");
-    const mains=document.querySelector("main");
-  
     function changeColor(){
-  
+        
+        const mains=document.querySelector("main");
+        const lists=document.querySelectorAll(".changeColor li");
+
         lists.forEach((btn,index)=>{
             btn.addEventListener("click",e=>{
                 e.preventDefault();
@@ -39,16 +39,13 @@ export default function Nav(props){
         })
     }
    
-    window.onload=()=>{
-      changeColor()
-  }
 
     return(
         <>
             <nav id="nav" className={props.type}>
                 <h1><NavLink exact to='/home'>HANNA</NavLink></h1>
                 <Gnb />
-                <ul className="changeColor">
+                <ul className="changeColor" onClick={changeColor}>
                         <li className="on"><b>■</b></li>
                         <li><b>■</b></li>
                         <li><b>■</b></li>

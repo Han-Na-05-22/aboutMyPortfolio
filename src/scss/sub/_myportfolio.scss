@@ -119,13 +119,14 @@
                                     height: 100%;
                                     width: 100%;
                                     object-fit: cover;
-                                    transition: 2s;
+                                    transition: 2.5s;
                                     opacity: 0;
                                     filter: saturate(70%);
                                     position: absolute;
                                     cursor: pointer;
-                                    top: 100%;
-                                    left: 0%;
+                                    left: 50%;
+                                    top:100%;
+                                    transform: translate(-50%,-50%); 
             
                                     &:hover{
                                         filter: saturate(125%);
@@ -162,7 +163,7 @@
                                     letter-spacing: 1px;
                                     text-align: left;
                                     color:#111;
-                                    margin-bottom: 10px;
+                                    margin-bottom: 5px;
                                 }
 
                                 b{
@@ -193,18 +194,14 @@
                                opacity: 1;
             
                                .pic img{
-                                    left: 50%;
                                     top:50%;
-                                    transform: translate(-50%,-50%); 
                                     opacity: 1;
                                 }
             
                                 span,.mainContent{
                                     transform: translateY(0);
                                     opacity: 1;
-                                    
                                 }
-                               
                             }
                         }
                     }

@@ -668,7 +668,7 @@
     #About{
         width: 100%;
         height: 78%;
-        top: 23%;
+        top: 20%;
         left: 0px;
         border-radius: 0;
         padding:0;
@@ -678,7 +678,7 @@
             >.wrap{
    
                 .aboutContent{
-                    padding:30px 10px 0px 10px;
+                    padding:60px 10px 30px 10px;
 
                     .aboutMe{
                         border-radius: 0px;
@@ -689,7 +689,7 @@
                             font:bold 20px/1 'Josefin Sans';
                         }
                 
-                        p{ font:normal  13px/23px '맑은 고딕';}
+                        p{ font:normal  11px/20px '맑은 고딕';}
                     }
                 
                     .mySkill{
@@ -702,7 +702,51 @@
                         ul{padding:10px 30px;}
                     }
 
-                    .music{display: none;}
+                    .music{
+
+                        .swiper.swiper-initialized{
+
+                            .swiper-button-prev{ display: none;}
+                            
+                            .swiper-button-next{ display: none;}
+                
+                            .swiper-wrapper{
+
+                                .swiper-slide{
+                                    padding:0px 15px;
+
+                                    .wrap{
+                                        padding:0px 10px;
+                                        margin-right:0px;
+
+                                        .pic{
+                                            height: 100px;
+                                            left: -15px;
+
+                                            &::after{
+                                                width: 25px;
+                                                height: 25px;
+                                            }
+                                        }
+                
+                                        .txt{
+                                            margin-right: 15px;
+
+                                            strong{font:bold 13.5px/1 'Josefin Sans';}
+                                        }
+
+                                        ul{
+                                            
+                                            li{    
+                                                margin-right: 15px;
+                                                .svg-inline--fa{font-size: 20px;}
+                                            }
+                                        }
+                                    }
+                                }  
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -51,9 +51,9 @@ export default function About(){
 
         audios = document.querySelectorAll(".music audio");
         imgs = document.querySelectorAll(".music img");
-        plays = document.querySelectorAll(".music .play");
-        pauses = document.querySelectorAll(".music .pause");
-        loads = document.querySelectorAll(".music .load");
+        plays = document.querySelectorAll(".music ul .play");
+        pauses = document.querySelectorAll(".music ul .pause");
+        loads = document.querySelectorAll(".music ul .load");
 
         plays.forEach((btn,idx)=>{
             btn.addEventListener("click",e=>{
@@ -91,12 +91,15 @@ export default function About(){
 
                 lists = document.querySelectorAll(".music .wrap");
 
-                for(let el of lists){
-                    el.classList.remove("on");
-                    stopMusic();
-                }                
+                    for(let el of lists){
+                        el.classList.remove("on");
+                        stopMusic();
+                    }         
+
+                setTimeout(()=>{
                 lists[idx].classList.add("on");
                 audios[idx].play();
+                },1000)
             })
         })
     }
@@ -128,35 +131,36 @@ export default function About(){
                         <ul>
                             <li>
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/ex.png`}></img>
+                                <img src={`${path}/img/ex.png`}
+                                alt="엑셀"></img>
                             </li>
                             <li> 
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/ps.png`}></img>
+                                <img src={`${path}/img/ps.png`}alt="포토샵"></img>
                             </li>
                             <li>
                             <div className="boxBg"></div>
-                                <img src={`${path}/img/html.png`}></img>
+                                <img src={`${path}/img/html.png`}alt="html"></img>
                             </li>
                             <li>
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/css.png`}></img>
+                                <img src={`${path}/img/css.png`}alt="css"></img>
                             </li>
                             <li>
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/scss.png`}></img>
+                                <img src={`${path}/img/scss.png`}alt="사스"></img>
                             </li>
                             <li>
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/js.png`}></img>
+                                <img src={`${path}/img/js.png`}alt="자바스크립트"></img>
                             </li>
                             <li>
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/react.png`}></img>
+                                <img src={`${path}/img/react.png`}alt="리액트"></img>
                             </li>
                             <li>
                                 <div className="boxBg"></div>
-                                <img src={`${path}/img/redux.png`}></img>
+                                <img src={`${path}/img/redux.png`}alt="리덕스"></img>
                             </li>
                         </ul>
                     </div>
@@ -173,20 +177,20 @@ export default function About(){
                                     <SwiperSlide key={idx} onClick={()=>{}}>
                                         <div className="wrap">
                                             <div className="pic">
-                                                <img src={`${path}/img/${item.pic}`}/>
+                                                <img src={`${path}/img/${item.pic}`} alt="디코드"/>
                                             </div>
                                             <div className="txt">
                                                 <strong>{item.title}</strong>
                                                 <span>{item.name}</span>
                                             </div>
                                             <ul>
-                                                <li className="play">
+                                                <li className="play" onClick={aboutMusic}>
                                                     <FontAwesomeIcon icon={faPlay} />
                                                 </li>
-                                                <li className="pause">
+                                                <li className="pause" onClick={aboutMusic}>
                                                     <FontAwesomeIcon icon={faPause} />
                                                 </li>
-                                                <li className="load">
+                                                <li className="load" onClick={aboutMusic}>
                                                     <FontAwesomeIcon icon={faRedo} />
                                                  </li>
                                                 <audio src={item.audio} />

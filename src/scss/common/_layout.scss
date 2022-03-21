@@ -150,6 +150,17 @@
                 }
             }
         }
+
+        >section{
+            opacity: 0;
+            transform: translateY(100px);
+            transition: 1s;
+
+            &.on{
+                transform:translateY(0%);
+                opacity: 1;
+            }
+        }
     }
 
     >img{
@@ -157,29 +168,21 @@
         z-index:-1;
         object-fit: cover;
         height: 350px;
-        // border:1px solid red;
-        width: 1000px;
-        left: -1000px;
+        width: 80%;
 
         &:nth-of-type(1){
-            top:0px;
-            transform: rotate(180deg);
-            animation: cloudAni 40s linear infinite;
+            bottom: 0px;
+            right: 0px;
         }
 
         &:nth-of-type(2){
-            bottom:0px;
-            animation: cloudAni 50s 10s linear infinite;
+            top:0px;
+            left: 0%;
+            transform: rotate(180deg);
         }
     }
 }
 
-@keyframes cloudAni{
-    0%{opacity: 0.3; left:-1000px;}
-    90%{opacity: 1; left:1000px;}
-    95%{opacity: 0; left:1100px;}
-    100%{opacity: 0; left:-1000px;}
-}
 
 @media screen and(max-width:1179px){
     .App{
@@ -203,7 +206,6 @@
 @media screen and(max-width:779px){
     .App{padding:15px 0px;
         main{
-            // background: rgba(255,255,255,.1);
             box-shadow: none;
             background: none;
             padding:0px;
