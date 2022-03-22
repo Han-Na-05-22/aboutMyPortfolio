@@ -8,6 +8,7 @@ import { faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 export default function Nav(props){
 
+
     function changeColor(){
         
         const mains=document.querySelector("main");
@@ -38,6 +39,10 @@ export default function Nav(props){
             })
         })
     }
+
+    useEffect(()=>{
+        changeColor();
+    })
    
 
     return(

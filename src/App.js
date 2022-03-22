@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import './scss/style.scss';
 import {Route,Switch} from 'react-router-dom';
 
-function App() {
+function App(props) {
 
   const path = process.env.PUBLIC_URL;
 
