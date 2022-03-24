@@ -18,18 +18,6 @@
         "name": "HanNa",
         "pic" : "music05.png",
         "audio":"test"
-      },
-      {
-        "title": "Music04",
-        "name": "HanNa",
-        "pic" : "music06.png",
-        "audio":"test"
-      },
-      {
-        "title": "Music05",
-        "name": "HanNa",
-        "pic" : "music07.png",
-        "audio":"test"
       }
     ]
   }
